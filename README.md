@@ -15,6 +15,12 @@ Ignored files
  - chicago.csv
  - new_york_city.csv
 
+## Tech
+This script works thanks to
+- [Python](https://www.python.org/)
+- [Pandas](https://pandas.pydata.org/docs/)
+- [Numpy](https://numpy.org/)
+
 ### Credits
 I could not have done this project without 
 - [Udacity](https://learn.udacity.com/) 
