@@ -8,7 +8,15 @@ Explore birkshare US data
 Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+ - bikeshare_2.py
+
+Ignored files
+ - washington.csv
+ - chicago.csv
+ - new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+I could not have done this project without 
+- [Udacity](https://learn.udacity.com/) 
+- [Stackoverflow](https://stackoverflow.com/)
+- [Pandas Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
