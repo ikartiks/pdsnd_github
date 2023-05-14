@@ -5,17 +5,10 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
-
-
 months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
 days = ['monday', 'tuesday', 'wednesday', 'thursday','friday','saturday', 'sunday']
 
-
-
 def get_filters():
-
-    
-
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -77,8 +70,6 @@ def load_data(city, month, day):
 
     df = pd.read_csv(CITY_DATA[city])
 
-    #print(df['Start Time'].dtype)
-
     df['stratDate'] = pd.to_datetime(df['Start Time'])
     
     if month != 'all':
@@ -86,8 +77,6 @@ def load_data(city, month, day):
     
     if day != 'all':
         df = df[df['stratDate'].dt.day_of_week == days.index(day)]
-    #print(df.describe())
-    #print(df.head())
 
     return df
 
@@ -131,7 +120,6 @@ def station_stats(df):
     counts = df.groupby(["Start Station", "End Station"])["End Station"].count().reset_index(name="count")
     
     counts = counts.sort_values('count', ascending=False)
-    #print(counts)
     print("start + end {}".format(counts.iloc[0]))
 
 
@@ -178,8 +166,6 @@ def user_stats(df):
     if 'Birth Year' in df.columns:
         print ("Earliest - {}, Recent - {} and most common birth year - {}".format(df['Birth Year'].min(),df['Birth Year'].max(),df['Birth Year'].mode()))
 
-
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -196,8 +182,6 @@ def display_data(df):
 def main():
     while True:
         city, month, day = get_filters()
-
-        #print('{} {} {}'.format(city, month, day))
         df = load_data(city, month, day)
 
         time_stats(df)
