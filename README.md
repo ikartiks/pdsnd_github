@@ -26,3 +26,6 @@ I could not have done this project without
 - [Udacity](https://learn.udacity.com/) 
 - [Stackoverflow](https://stackoverflow.com/)
 - [Pandas Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
+
+## License
+**Free Software, thanks to Udacity**
